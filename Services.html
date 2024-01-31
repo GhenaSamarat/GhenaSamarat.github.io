@@ -9,7 +9,7 @@
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
-      background-color: #e9c6c6;;
+      background-color: #e9c6c6;
     }
     nav {
       position: fixed;
@@ -26,15 +26,120 @@
       padding:  15px; 
       font-size: 1.5em; 
     }
-    </style>
-    </head>
-    <body>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="about-us.html">About Us</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    
-    </head>
-      </body>
+
+    .service-container {
+      display: flex;
+      margin-top: 50px;
+      text-align: center;
+      justify-content: space-around;
+    }
+
+    .service-container div {
+      display: inline-block;
+      width: 200px; 
+      margin: 20px; 
+    }
+   
+    .service-container img {
+      width: 120%;
+      height: 80%;
+      cursor: pointer;
+    }
+
+    .service-description {
+      color: #333;
+      font-size: 1.2em;
+    }
+
+    .gallery-section {
+      background-color: #f2f2f2;
+      text-align: center;
+      padding-top: 50px;
+    }
+
+    .gallery-section h2 {
+      margin-bottom: 30px; 
+    }
+
+    .gallery-image {
+      width: 320px; 
+      height: 290px;
+      margin: 15px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="about-us.html">About Us</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  
+  <!-- Service Containers -->
+  <div class="service-container">
+    <!-- Makeup and Hair -->
+    <div>
+      <img src="image+vid\makeup.jpg" alt="Makeup" onclick="scrollToGallery()">
+      <div class="service-description">
+        <p>Makeup</p>
+        <p>20-50$</p>
+      </div>
+    </div>
+    <div>
+      <img src="image+vid\hair.jpg" alt="Hair Style" onclick="scrollToGallery()">
+      <div class="service-description">
+        <p>Hair Style</p>
+        <p>10-50$</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="service-container">
+    <!-- Nails and Spa -->
+    <div>
+      <img src="image+vid\nails.jpg" alt="Nails" onclick="scrollToGallery()">
+      <div class="service-description">
+        <p>Nails</p>
+        <p>40-60$</p>
+      </div>
+    </div>
+    <div>
+      <img src="image+vid\spa.jpg" alt="Spa" onclick="scrollToGallery()">
+      <div class="service-description">
+        <p>Spa</p>
+        <p>80$</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gallery Section -->
+  <div class="gallery-section" id="gallery">
+    <h2>Photo Gallery</h2>
+    <div>
+      <img class="gallery-image" src="image+vid\makeup1.jpeg" alt="Gallery Image 1">
+      <img class="gallery-image" src="image+vid\makeup2.jpeg" alt="Gallery Image 2">
+      <img class="gallery-image" src="image+vid\makeup3.jpeg" alt="Gallery Image 3">
+      <img class="gallery-image" src="image+vid\makeup4.jpeg" alt="gallery-image4">
+      <img class="gallery-image" src="image+vid\nails1.jpeg" alt="gallery-image5">
+      <img class="gallery-image" src="image+vid\nails2.jpeg" alt="gallery-image6">
+      <img class="gallery-image" src="image+vid\nails3.jpeg" alt="gallery-image7">
+      <img class="gallery-image" src="image+vid\nails4.jpeg" alt="gallery-image8">
+      <img class="gallery-image" src="image+vid\hair1.jpeg" alt="gallery-image9">
+      <img class="gallery-image" src="image+vid\hair2.jpeg" alt="gallery-image10">
+      <img class="gallery-image" src="image+vid\hair3.jpeg" alt="gallery-image11">
+      <img class="gallery-image" src="image+vid\hair4.jpeg" alt="gallery-image12">
+      <img class="gallery-image" src="image+vid\hair5.jpeg" alt="gallery-image13">
+      <img class="gallery-image" src="image+vid\hair6.jpeg" alt="gallery-image14">
+    </div>
+  </div>
+
+  <script>
+    function scrollToGallery() {
+      document.getElementById('gallery').scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
+  </script>
+</body>
+</html>
